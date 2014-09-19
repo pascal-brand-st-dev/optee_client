@@ -5,4 +5,4 @@ compiler:
 
   # Change this to your needs
 # script: ./configure && make
-script: make && CFG_TEE_CLIENT_LOG_LEVEL=5 make
+script: CROSS_COMPILE= make && CROSS_COMPILE= CFG_TEE_CLIENT_LOG_LEVEL=5 make
