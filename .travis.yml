@@ -1,0 +1,8 @@
+language: c
+compiler:
+  - gcc
+  - clang
+
+  # Change this to your needs
+# script: ./configure && make
+script: make && CFG_TEE_CLIENT_LOG_LEVEL=5 make
