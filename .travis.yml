@@ -14,23 +14,18 @@ notifications:
 #  - arm-linux-gnueabihf-gcc -v
 
 before_install:
-  - wget http://releases.linaro.org/14.05/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
-  - tar xvf gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
+  # - wget http://releases.linaro.org/14.05/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
+  # - tar xvf gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
+  # - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin
+  - wget http://releases.linaro.org/12.05/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux.tar.bz2
+  - bunzip2 gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux.tar.bz2
+  - tar xvf gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar
   - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin
 
 script:
   - uname -a
   - echo $PATH
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
-  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1
-  - /home/travis/build/pascal-brand-st-dev/optee_client/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1 -v
-  - arm-linux-gnueabihf-gcc-4.9.1 -v
-  - arm-linux-gnueabihf-gcc -v
-  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
-  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1
-  - rm $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
-  - cp $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1 $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
-  - arm-linux-gnueabihf-gcc-4.9.1 -v
   - arm-linux-gnueabihf-gcc -v
   - make
   - CFG_TEE_CLIENT_LOG_LEVEL=5 make
