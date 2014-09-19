@@ -28,6 +28,8 @@
 #include <string.h>
 #include "handle.h"
 
+#error Error on purpose
+
 /*
  * Define the initial capacity of the database. It should be a low number
  * multiple of 2 since some databases a likely to only use a few handles.
