@@ -22,7 +22,13 @@ script:
   - echo $PATH
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1
+  - arm-linux-gnueabihf-gcc-4.9.1 -v
+  - arm-linux-gnueabihf-gcc -v
+  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
+  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1
+  - rm $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
   - cp $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1 $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
+  - arm-linux-gnueabihf-gcc-4.9.1 -v
   - arm-linux-gnueabihf-gcc -v
   - make
   - CFG_TEE_CLIENT_LOG_LEVEL=5 make
