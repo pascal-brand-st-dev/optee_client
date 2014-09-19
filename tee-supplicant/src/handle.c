@@ -28,7 +28,9 @@
 #include <string.h>
 #include "handle.h"
 
-#error Error on purpose
+/* Remove the error
+ * #error Error on purpose
+ */
 
 /*
  * Define the initial capacity of the database. It should be a low number
