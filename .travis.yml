@@ -25,7 +25,7 @@ before_install:
 script:
   - uname -a
   - echo $PATH
-  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
+  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc
   - arm-linux-gnueabihf-gcc -v
   - make
   - CFG_TEE_CLIENT_LOG_LEVEL=5 make
