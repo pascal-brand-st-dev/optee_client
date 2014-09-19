@@ -22,6 +22,7 @@ script:
   - echo $PATH
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1
+  - /home/travis/build/pascal-brand-st-dev/optee_client/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc-4.9.1 -v
   - arm-linux-gnueabihf-gcc-4.9.1 -v
   - arm-linux-gnueabihf-gcc -v
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
