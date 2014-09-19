@@ -3,6 +3,9 @@ language: c
 #  - gcc
 #  - clang
 
+notifications:
+  - email: true
+
 #before_script:
 #  - wget http://releases.linaro.org/14.05/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
 #  - tar xvf gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
@@ -12,11 +15,12 @@ language: c
 
 before_install:
   - wget http://releases.linaro.org/14.05/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
-  - tar -zxf gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
+  - tar xvf gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
   - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin
 
 script:
   - echo $PATH
+  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
   - arm-linux-gnueabihf-gcc -v
   - make
   - CFG_TEE_CLIENT_LOG_LEVEL=5 make
