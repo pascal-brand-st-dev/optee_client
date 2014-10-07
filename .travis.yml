@@ -1,3 +1,5 @@
+# One may have a look at http://docs.travis-ci.com/user/installing-dependencies/
+
 language: c
 #compiler:
 #  - gcc
@@ -25,7 +27,7 @@ before_script:
 
 
 script:
-  - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/binaries
+  - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin
   - uname -a
   - echo $PATH
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc
