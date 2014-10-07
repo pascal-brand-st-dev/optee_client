@@ -30,3 +30,4 @@ script:
   - arm-linux-gnueabihf-gcc -v
   - make
   - CFG_TEE_CLIENT_LOG_LEVEL=5 make
+
