@@ -25,13 +25,14 @@ before_script:
   - tar xvf gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux.tar
   - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin
 
-
 script:
   - uname -a
   - echo $PATH
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc
+  - cd gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin
+  - ls -al
+  - arm-linux-gnueabihf-gcc -v
   - /home/travis/build/pascal-brand-st-dev/optee_client/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc -v
   - PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin arm-linux-gnueabihf-gcc -v
   - PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin make
   - CFG_TEE_CLIENT_LOG_LEVEL=5 make
-
