@@ -18,7 +18,7 @@ notifications:
 before_install:
   # - sudo apt-get install  libgd2-xpm:i386
   # - sudo apt-get install libsane:i386 libgphoto2-2:i386
-  # - sudo apt-get install ia32-libs-multiarch
+  - sudo apt-get install ia32-libs-multiarch
   - sudo apt-get install ia32-libs
 
 
