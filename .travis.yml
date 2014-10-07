@@ -19,7 +19,7 @@ before_install:
   # - sudo apt-get install  libgd2-xpm:i386
   # - sudo apt-get install libsane:i386 libgphoto2-2:i386
   # - sudo apt-get install ia32-libs-multiarch
-  # - sudo apt-get install ia32-libs
+  - sudo apt-get install ia32-libs
 
 
 before_script:
@@ -36,6 +36,7 @@ script:
   - uname -a
   - echo $PATH
   # - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc
+  - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin/arm-linux-gnueabihf-gcc
   # - /home/travis/build/pascal-brand-st-dev/optee_client/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc -v
   - arm-linux-gnueabihf-gcc -v
   - make
