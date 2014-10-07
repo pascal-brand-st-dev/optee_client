@@ -16,7 +16,9 @@ notifications:
 #  - arm-linux-gnueabihf-gcc -v
 
 before_install:
-  - sudo apt-get -f install ia32-libs-multiarch ia32-libs -y
+  - sudo apt-get install libsane libgphoto2-2 -y
+  - sudo apt-get install ia32-libs-multiarch ia32-libs -y
+
 
 
 before_script:
