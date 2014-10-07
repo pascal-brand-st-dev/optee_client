@@ -16,7 +16,7 @@ notifications:
 #  - arm-linux-gnueabihf-gcc -v
 
 before_install:
-  - sudo apt-get install ia32-libs-multiarch ia32-libs -f
+  - sudo apt-get -f install ia32-libs-multiarch ia32-libs
 
 
 before_script:
