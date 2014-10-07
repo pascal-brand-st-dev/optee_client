@@ -27,11 +27,10 @@ before_script:
 
 
 script:
-  - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin
   - uname -a
   - echo $PATH
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc
-  - arm-linux-gnueabihf-gcc -v
-  - make
+  - PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin arm-linux-gnueabihf-gcc -v
+  - PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin make
   - CFG_TEE_CLIENT_LOG_LEVEL=5 make
 
