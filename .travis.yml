@@ -13,7 +13,8 @@ notifications:
 #  - echo $PATH
 #  - arm-linux-gnueabihf-gcc -v
 
-before_install:
+# before_install:
+before_script:
   # - wget http://releases.linaro.org/14.05/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
   # - tar xvf gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux.tar.xz
   # - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-4.9-2014.05_linux/bin
@@ -24,6 +25,7 @@ before_install:
 
 
 script:
+  - export PATH=$PATH:$PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/binaries
   - uname -a
   - echo $PATH
   - ls -al $PWD/gcc-linaro-arm-linux-gnueabihf-2012.05-20120523_linux/bin/arm-linux-gnueabihf-gcc
